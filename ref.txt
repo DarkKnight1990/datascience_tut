@@ -3,3 +3,5 @@ docker build -t python3.9-setup --build-arg USER_ID=$(id -u) --build-arg GROUP_I
 docker run -it --rm -p 8888:8888 --name python-data-science -v /home/piklu/tutorials/python/datascience_tut:/usr/src/app/datascience_tut python3.9-setup bash
 
 jupyter-lab --ip=0.0.0.0 --allow-root
+
+docker-compose --build-arg USER_ID=$(id -u) --build-arg GROUP_ID=$(id -g) .
