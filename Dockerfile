@@ -1,7 +1,7 @@
-FROM python:3.9.5
+FROM python:3.10.5
 
 RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
+RUN apt-get install -y python3-pip python3-dev build-essential
 RUN pip install --upgrade pip
 RUN apt-get install -y ghostscript libgs-dev
 RUN apt-get install -y libmagickwand-dev imagemagick --fix-missing
